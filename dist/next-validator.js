@@ -2,14 +2,14 @@
 
   var global = window || this;
 
-  var emailRE=/\s+/;
+  var emailRE=/^([0-9A-Za-z\-_\.]+)@([0-9a-z]+\.[a-z]{2,3}(\.[a-z]{2})?)$/;
   var mobileRE=/^1[34578]\d{9}$/;
 
   var nx = global.nx || require('next-js-core2');
   var Validator = nx.declare('nx.Validator', {
     statics:{
-      isNotEmpty:function(inValue){
-        return !!String(inValue).trim();
+      isEmpty:function(inValue){
+        return !String(inValue).trim();
       },
       isNumber:function(inValue){
         return nx.isNumber( parseFloat(inValue) );
@@ -23,7 +23,7 @@
       isInRange:function(inValue,inStart,inEnd){
         var value = String(inValue);
         var len = value.length;
-        return len>=inStart && len<inEnd;
+        return len>inStart && len<inEnd;
       }
     }
   });
