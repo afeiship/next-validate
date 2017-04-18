@@ -12,7 +12,10 @@
         return !String(inValue).trim();
       },
       isNumber:function(inValue){
-        return nx.isNumber( parseFloat(inValue) );
+        if(!isNaN(inValue)){
+          return nx.isNumber( parseFloat(inValue) );
+        }
+        return false;
       },
       isEmail:function(inValue){
         return emailRE.test(inValue);
