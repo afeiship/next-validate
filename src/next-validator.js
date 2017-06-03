@@ -24,13 +24,16 @@
       isMobile:function(inValue){
         return mobileRE.test(inValue);
       },
-      isInRange:function(inValue,inStart,inEnd){
+      isInRange:function(inValue,inData){
         var value = String(inValue);
         var len = value.length;
-        return len>inStart && len<inEnd;
+        return len>inData.start && len<inData.end;
       },
       isIdCard: function(inValue){
         return idCardRE.test(inValue);
+      },
+      isEqual: function(inValue,inData){
+        return inValue === inData;
       }
     }
   });
