@@ -9,8 +9,8 @@
   var nx = global.nx || require('next-js-core2');
   var Validator = nx.declare('nx.Validator', {
     statics:{
-      isNotEmpty: function(inValue){
-        return !!String(inValue).trim();
+      isEmpty: function(inValue){
+        return !String(inValue).trim();
       },
       isNumber: function(inValue){
         if(!isNaN(inValue)){
