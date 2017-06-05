@@ -33,7 +33,7 @@
         return idCardRE.test(inValue);
       },
       isEqual: function(inValue,inData){
-        return inValue === inData;
+        return inValue === inData.value;
       }
     }
   });
