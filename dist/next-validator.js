@@ -1,6 +1,6 @@
 (function () {
 
-  var global = window || this;
+  var global = global || this || self || window;
 
   var emailRE =/^([0-9A-Za-z\-_\.]+)@([0-9a-z]+\.[a-z]{2,3}(\.[a-z]{2})?)$/;
   var mobileRE =/^1[34578]\d{9}$/;
