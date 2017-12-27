@@ -17,4 +17,8 @@ describe('next/Validator', function () {
     assert.ok( NxValidator.isMobile('13007171608') );
   });
 
+  it('nx.Validator isMobile 199********', function () {
+    assert.ok( NxValidator.isMobile('19907171608') );
+  });
+
 });

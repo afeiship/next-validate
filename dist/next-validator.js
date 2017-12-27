@@ -3,7 +3,7 @@
   var global = global || this || self || window;
 
   var emailRE =/^([0-9A-Za-z\-_\.]+)@([0-9a-z]+\.[a-z]{2,3}(\.[a-z]{2})?)$/;
-  var mobileRE =/^1[34578]\d{9}$/;
+  var mobileRE =/^1[345789]\d{9}$/;
   var idCardRE = /(^\d{15}$)|(^\d{17}([0-9]|X)$)/i;
 
   var nx = global.nx || require('next-js-core2');
