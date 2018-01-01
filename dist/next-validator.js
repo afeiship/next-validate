@@ -27,7 +27,7 @@
       isInRange: function(inValue,inData){
         var value = String(inValue);
         var len = value.length;
-        return len>inData.start && len<inData.end;
+        return len>inData.start && len<=inData.end;
       },
       isIdCard: function(inValue){
         return idCardRE.test(inValue);
